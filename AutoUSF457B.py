@@ -6,9 +6,6 @@ import webbrowser
 
 import pyautogui
 
-import re
-# from robobrowser import RoboBrowser
-
 def pyautogui1():    
     "click Microsoft Edge on taskbar"
     time.sleep(5)
