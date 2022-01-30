@@ -1,10 +1,10 @@
 # AutoUSF457B
 Automatically transfer University of South Florida 457B assets from Nationwide to Charles Schwab
 
-Create environment.yml file via conda
+### Create environment.yml file via conda
 with your conda environment activated, run the following command to generate dependency yaml file:
 
-	conda env export > environment_droplet.yml
+	conda env export > environment.yml
 
 Commit the yml file, git clone the repo onto the target OS, and create a conda environment from it as follows:
 
