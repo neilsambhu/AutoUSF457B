@@ -9,3 +9,7 @@ with your conda environment activated, run the following command to generate dep
 Commit the yml file, git clone the repo onto the target OS, and create a conda environment from it as follows:
 
 	conda env create -f environment.yml
+
+Run the program:
+
+	run.bat
