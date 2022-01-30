@@ -2,20 +2,24 @@ import time, datetime
 from datetime import timedelta
 from datetime import date
 from time import sleep
-from tqdm import tqdm
+import webbrowser
 
 import pyautogui
+
+import re
+# from robobrowser import RoboBrowser
+
 def pyautogui1():    
     "click Microsoft Edge on taskbar"
     time.sleep(5)
     print(pyautogui.position())
-
     # duration = 10
     # # login button
     # pyautogui.moveTo(780,587,duration)
     # pyautogui.click()
 
-    # time.sleep(duration)   
+    # time.sleep(duration)  
+    pass 
 def pyautogui2():
     duration = 3
     # login button
@@ -66,6 +70,54 @@ def pyautogui2_1():
     authorizationCode = parse_qs(parsed.query)['oauth_verifier']
     # print(authorizationCode)
     return authorizationCode
-
+def OpenMicrosoftEdge():
+    # browser = RoboBrowser(history=True)
+    # browser.open('https://www.nrsflorida.com/iApp/rsc/login.x')
+    webbrowser.open_new('https://www.nrsflorida.com/iApp/rsc/login.x')
+    pass
+def NavigateNRS_Florida():
+    duration = 3
+    # Click "Log in"
+    pyautogui.moveTo(1137, 526, duration)
+    pyautogui.click()
+    # Click "Manage account"
+    pyautogui.moveTo(889, 207, 3*duration)
+    pyautogui.click()
+    # Click "Change investments"
+    pyautogui.moveTo(485, 326, duration)
+    pyautogui.click()
+    # Click "Manage Your Self-directed Option (SDO)"
+    time.sleep(duration)
+    pyautogui.hotkey('pagedown')
+    time.sleep(duration)
+    pyautogui.moveTo(535, 975, duration)
+    pyautogui.click()
+    # Click "One time transfer from your core account to Schwab PCRA"
+    pyautogui.moveTo(383, 822, duration)
+    pyautogui.click()
+    # Click "Percent"
+    pyautogui.moveTo(383, 991, duration)
+    pyautogui.click()
+    # Click "Next"
+    pyautogui.hotkey('pagedown')
+    pyautogui.moveTo(1489, 358, duration)
+    pyautogui.click()
+    # Click "Next"
+    pyautogui.moveTo(1492, 819, duration)
+    pyautogui.click()
+    # Type "100"
+    pyautogui.moveTo(1475, 744, duration)
+    pyautogui.click()
+    pyautogui.hotkey('1','0','0', interval=duration)
+    # Click "Next"
+    pyautogui.moveTo(1492, 897, duration)
+    pyautogui.click()
+    # Click "Submit"
+    pyautogui.moveTo(1492, 897, duration)
+    pyautogui.click()
+    pass
 if __name__ == "__main__":
-    pyautogui()
+    # pyautogui1()
+    OpenMicrosoftEdge()
+    NavigateNRS_Florida()
+    pass
