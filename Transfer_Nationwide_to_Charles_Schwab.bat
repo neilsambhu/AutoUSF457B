@@ -1,6 +1,6 @@
 :StartAutoUSF457B
 call activate AutoUSF457B
-python AutoUSF457B.py
+python Transfer_Nationwide_to_Charles_Schwab.py
 call conda deactivate
 exit
 goto StartAutoUSF457B
